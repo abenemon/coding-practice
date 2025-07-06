@@ -8,11 +8,9 @@ When you see `class str(object)` in Python’s help system, you’re looking at 
 
 In Python, `str` stands for **string**—the basic type for text, like words or sentences. Examples:
 
-    ```python
     greeting = "Hello, world!"
     name = 'Abe'
     number_text = "123"
-    ```
 
 You’re using strings any time you put text in quotes.
 
@@ -24,29 +22,21 @@ You can create a string by:
 
 - **Typing text in quotes:**
 
-        ```python
         animal = "cat"
-        ```
 
 - **Converting other types to strings:**
 
-        ```python
         age = 42
         age_text = str(age)  # "42"
-        ```
 
 - **Decoding bytes into a string:**
 
-        ```python
         b = b'hello'
         text = str(b, 'utf-8')  # "hello"
-        ```
 
 - **Empty string if nothing is given:**
 
-        ```python
         empty = str()  # ""
-        ```
 
 ### Parameters
 
@@ -66,9 +56,8 @@ When you use Python’s built-in functions like `+`, `==`, `in`, or `[]` with st
 
 **Joins two strings together with `+`.**
 
-    ```python
     "Hello, " + "world!"  # "Hello, world!"
-    ```
+    
 *Joins two pieces of text into one.*
 
 ---
@@ -89,10 +78,9 @@ When you use Python’s built-in functions like `+`, `==`, `in`, or `[]` with st
 
 **Checks if two strings are exactly the same.**
 
-    ```python
     "hello" == "hello"   # True
     "hello" == "world"   # False
-    ```
+    
 *Tests if two pieces of text match exactly.*
 
 ---
@@ -101,10 +89,9 @@ When you use Python’s built-in functions like `+`, `==`, `in`, or `[]` with st
 
 **Formats a string using `.format()` or f-strings.**
 
-    ```python
     "Name: {}".format("Abe")        # "Name: Abe"
     f"Pi is about {3.14159:.2f}"    # "Pi is about 3.14"
-    ```
+
 *Controls how text (or numbers) are shown inside a string.*
 
 ---
@@ -113,9 +100,8 @@ When you use Python’s built-in functions like `+`, `==`, `in`, or `[]` with st
 
 **Checks if one string comes after or is the same as another (alphabetically).**
 
-    ```python
     "cat" >= "apple"   # True
-    ```
+    
 *Checks which text comes later in alphabetical order, or if they’re the same.*
 
 ---
@@ -124,11 +110,10 @@ When you use Python’s built-in functions like `+`, `==`, `in`, or `[]` with st
 
 **Gets a letter (or part) of a string using `[]`.**
 
-    ```python
     word = "hello"
     letter = word[1]    # "e" (remember: counting starts at 0)
     part = word[1:4]    # "ell"
-    ```
+    
 *Lets you pick out a letter or chunk of text by its position.*
 
 ---
@@ -144,9 +129,8 @@ When you use Python’s built-in functions like `+`, `==`, `in`, or `[]` with st
 
 **Checks if one string comes after another (alphabetically).**
 
-    ```python
     "dog" > "cat"   # True
-    ```
+    
 *Which string would you find later in a dictionary?*
 
 ---
@@ -155,7 +139,6 @@ When you use Python’s built-in functions like `+`, `==`, `in`, or `[]` with st
 
 **Returns a unique code for the string (for use in dictionaries and sets).**
 
-    ```python
     hash("hello")    # Some integer, e.g., 532321983
     ```
 *Lets strings be used as keys in dictionaries or members of sets.*
@@ -186,15 +169,11 @@ When you use Python’s built-in functions like `+`, `==`, `in`, or `[]` with st
 
 **Tip:** If you want to see what other methods strings have, just run:
 
-    ```python
     help(str)
-    ```
 
 Or, for a shorter list:
 
-    ```python
     dir(str)
-    ```
 
 ---
 
