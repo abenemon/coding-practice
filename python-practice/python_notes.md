@@ -107,3 +107,21 @@ Each type allows you to do different things. You can add numbers, but you can’
 - **Methods** are tools that belong to a particular kind of data (like a string or a list).
 
 If you want even **more explanation, analogies, or practice problems** for any of these, just tell me what’s confusing or what you’d like to try!
+
+# Basic Math with Python
+
+## Addition, subtraction
+    
+    `print(5 + 5)`
+    `print(5 - 5)`
+
+## Multiplication, division, modulo, and exponentiation
+    
+    `print(3 * 5)`
+    `print(10 / 2)`
+    `print(18 % 7)`
+    `print(4 ** 2)`
+
+## How much is your $100 worth after 7 years?
+    
+    `print(100 * (1.1**7))`
