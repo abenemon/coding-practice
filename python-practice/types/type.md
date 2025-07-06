@@ -11,8 +11,8 @@ In Python, `type` is both:
 
 1. **The function you use to check what type an object is:**  
 
-     type("hi")        # <class 'str'>
-     type([1, 2])      # <class 'list'>
+       type("hi")        # <class 'str'>
+       type([1, 2])      # <class 'list'>
 
 3. **The metaclass that all classes are instances of:**  
    Every class in Python is itself an object of type `type`.
@@ -59,10 +59,10 @@ For each, you’ll see:
 ## __call__(self, *args, **kwargs)
 
 - **What you write:**  
-      instance = MyClass(5, 7)
+      `instance = MyClass(5, 7)`
 
 - **What Python does:**  
-      MyClass.__call__(5, 7)
+      `MyClass.__call__(5, 7)`
 
 - **What it means:**  
   Lets you “call” a class object (which is itself a type) to create an instance of that class.
@@ -82,10 +82,10 @@ For each, you’ll see:
 ## __delattr__(self, name)
 
 - **What you write:**  
-      del MyClass.attribute
+      `del MyClass.attribute`
 
 - **What Python does:**  
-      MyClass.__delattr__('attribute')
+      `MyClass.__delattr__('attribute')`
 
 - **What it means:**  
   Removes an attribute from a class.
@@ -102,10 +102,10 @@ For each, you’ll see:
 ## __dir__(self)
 
 - **What you write:**  
-      dir(type_obj)
+      `dir(type_obj)`
 
 - **What Python does:**  
-      type_obj.__dir__()
+      `type_obj.__dir__()`
 
 - **What it means:**  
   Lists the attributes of a type (class).
@@ -120,10 +120,10 @@ For each, you’ll see:
 ## __getattribute__(self, name)
 
 - **What you write:**  
-      MyClass.x
+      `MyClass.x`
 
 - **What Python does:**  
-      MyClass.__getattribute__('x')
+      `MyClass.__getattribute__('x')`
 
 - **What it means:**  
   Looks up an attribute on a type (class).  
@@ -134,10 +134,10 @@ For each, you’ll see:
 ## __init__(self, *args, **kwargs)
 
 - **What you write:**  
-      (Not usually called directly for type objects!)
+      `(Not usually called directly for type objects!)`
 
 - **What Python does:**  
-      type_obj.__init__(*args, **kwargs)
+      `type_obj.__init__(*args, **kwargs)`
 
 - **What it means:**  
   Initializes a type object. (Usually only used by Python itself.)
@@ -147,10 +147,10 @@ For each, you’ll see:
 ## __instancecheck__(self, instance)
 
 - **What you write:**  
-      isinstance(obj, MyClass)
+      `isinstance(obj, MyClass)`
 
 - **What Python does:**  
-      MyClass.__instancecheck__(obj)
+      `MyClass.__instancecheck__(obj)`
 
 - **What it means:**  
   Checks if an object is an instance of a class (including subclasses).
@@ -164,10 +164,10 @@ For each, you’ll see:
 ## __or__(self, value)
 
 - **What you write:**  
-      NewType = TypeA | TypeB
+      `NewType = TypeA | TypeB`
 
 - **What Python does:**  
-      TypeA.__or__(TypeB)
+      `TypeA.__or__(TypeB)`
 
 - **What it means:**  
   Used in Python 3.10+ for [type unions](https://peps.python.org/pep-0604/) (for type hints).
@@ -183,10 +183,10 @@ For each, you’ll see:
 ## __repr__(self)
 
 - **What you write:**  
-      print(type(int))
+      `print(type(int))`
 
 - **What Python does:**  
-      type(int).__repr__()
+      `type(int).__repr__()`
 
 - **What it means:**  
   Returns a string that shows how to represent the type object.
@@ -200,10 +200,10 @@ For each, you’ll see:
 ## __ror__(self, value)
 
 - **What you write:**  
-      NewType = SomeValue | type_obj
+      `NewType = SomeValue | type_obj`
 
 - **What Python does:**  
-      type_obj.__ror__(SomeValue)
+      `type_obj.__ror__(SomeValue)`
 
 - **What it means:**  
   Like `__or__`, but with the operands reversed.  
@@ -214,10 +214,10 @@ For each, you’ll see:
 ## __setattr__(self, name, value)
 
 - **What you write:**  
-      MyClass.x = 99
+      `MyClass.x = 99`
 
 - **What Python does:**  
-      MyClass.__setattr__('x', 99)
+      `MyClass.__setattr__('x', 99)`
 
 - **What it means:**  
   Sets or changes a class attribute.
@@ -232,7 +232,7 @@ For each, you’ll see:
 ## __sizeof__(self)
 
 - **What you write:**  
-      size = type_obj.__sizeof__()
+      `size = type_obj.__sizeof__()`
 
 - **What it means:**  
   Returns the memory usage of a type object.
@@ -242,10 +242,10 @@ For each, you’ll see:
 ## __subclasscheck__(self, subclass)
 
 - **What you write:**  
-      issubclass(C, B)
+      `issubclass(C, B)`
 
 - **What Python does:**  
-      B.__subclasscheck__(C)
+      `B.__subclasscheck__(C)`
 
 - **What it means:**  
   Checks if one class is a subclass of another.
@@ -261,7 +261,7 @@ For each, you’ll see:
 ## __subclasses__(self)
 
 - **What you write:**  
-      MyClass.__subclasses__()
+      `MyClass.__subclasses__()`
 
 - **What it means:**  
   Returns a list of classes that directly inherit from this class.
@@ -278,7 +278,7 @@ For each, you’ll see:
 ## mro(self)
 
 - **What you write:**  
-      MyClass.mro()
+      `MyClass.mro()`
 
 - **What it means:**  
   Returns the "method resolution order" for a class: the order Python looks for methods and attributes.
