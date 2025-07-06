@@ -1,38 +1,93 @@
-# Summary of Your Notes (with fixes/clarification)
+Python Basics Explained
+Types
 
-## Types
+Types are the “kinds of things” Python can work with—think of them like categories for your data.
 
-| Syntax   | Description                      |
-|----------|----------------------------------|
-| `str()`  | String (text)                    |
-| `list()` | List (sequence of items)         |
-| `int()`  | Integer (whole number)           |
-| `float()`| Floating-point (decimal number)  |
+    str() – String
+    A sequence of letters, numbers, or symbols, usually used for text.
+    Example: "hello", "2024-07-05"
 
-> **Note:** `intr()` is probably a typo—should be `int()`.
+    list() – List
+    An ordered collection of items. You can change, add, or remove things in a list.
+    Example: [1, 2, 3], ["apple", "banana", "pear"]
 
----
+    int() – Integer
+    A whole number, with no decimal point.
+    Example: 5, -42, 2024
 
-## Functions
+    float() – Floating-point number
+    A number that can have a decimal point.
+    Example: 3.14, 0.0, -7.5
 
-*General-purpose commands you can call with parentheses:*
+Why do types matter?
+Each type allows you to do different things. You can add numbers, but you can’t add a number and a string without converting.
+Functions
 
-- `type()` &rarr; Tells you the type of a value  
-- `print()` &rarr; Prints something to the screen  
-- `max()` &rarr; Returns the maximum value  
-- `round()` &rarr; Rounds a number  
-- `index()` &rarr; *(Usually a method, not a function—see below)*  
-- `help()` &rarr; Displays documentation/help  
-- `len()` &rarr; Length of an object (e.g., list, string)  
-- `sorted()` &rarr; Returns a sorted version of a list or other iterable  
+Functions are built-in “mini-programs” in Python you can use to do something—just call them with parentheses.
 
----
+    type(x) – Shows you the type of x.
 
-## Methods
+print(type("hello"))  # <class 'str'>
+print(type(5))        # <class 'int'>
 
-*Things you call on an object with a dot, e.g., `object.method()`*
+print(x) – Sends information to your screen.
 
-- `.append()` &rarr; Adds an item to a list  
-- `.replace()` &rarr; Replaces part of a string with something else  
-- `.upper()` &rarr; Converts a string to uppercase  
-- `.reverse()` &rarr; Reverses a list *(in place; does not return a new list)*  
+print("Hello, world!")
+
+max(a, b, c, ...) – Gives you the largest value.
+
+print(max(1, 5, 3))  # 5
+
+round(x, n) – Rounds a number to n decimal places.
+
+print(round(3.14159, 2))  # 3.14
+
+help(x) – Opens up the help/documentation for anything in Python.
+
+help(str)
+
+len(x) – Tells you how many items are in something (like a list or string).
+
+print(len("hello"))    # 5
+print(len([1,2,3]))    # 3
+
+sorted(x) – Returns a sorted version of your list (doesn’t change the original).
+
+    numbers = [3, 1, 2]
+    print(sorted(numbers))  # [1, 2, 3]
+
+Methods
+
+Methods are like functions, but you use them on a specific object (like a string or a list), with a dot: thing.method().
+
+    .append(y) – Adds y to the end of a list.
+
+my_list = [1, 2, 3]
+my_list.append(4)
+print(my_list)  # [1, 2, 3, 4]
+
+.replace(a, b) – In a string, replaces every occurrence of a with b.
+
+text = "Hello world"
+print(text.replace("world", "Python"))  # "Hello Python"
+
+.upper() – Makes all letters in a string uppercase.
+
+name = "abe"
+print(name.upper())  # "ABE"
+
+.reverse() – Flips the order of a list, changing it in-place.
+
+    nums = [1, 2, 3]
+    nums.reverse()
+    print(nums)  # [3, 2, 1]
+
+Bottom line:
+
+    Types are what your data “is.”
+
+    Functions are tools you use on any data.
+
+    Methods are tools that belong to a particular kind of data (like a string or a list).
+
+If you want even more explanation, analogies, or practice problems for any of these, just tell me what’s confusing or what you’d like to try!
