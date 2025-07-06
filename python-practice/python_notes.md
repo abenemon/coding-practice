@@ -1,93 +1,109 @@
-Python Basics Explained
-Types
+# Python Basics Explained
 
-Types are the “kinds of things” Python can work with—think of them like categories for your data.
+## Types
 
-    str() – String
-    A sequence of letters, numbers, or symbols, usually used for text.
-    Example: "hello", "2024-07-05"
+**Types** are the “kinds of things” Python can work with—think of them like categories for your data.
 
-    list() – List
-    An ordered collection of items. You can change, add, or remove things in a list.
-    Example: [1, 2, 3], ["apple", "banana", "pear"]
+- `str()` – **String**  
+  A sequence of letters, numbers, or symbols, usually used for text.  
+  Example: `"hello"`, `"2024-07-05"`
 
-    int() – Integer
-    A whole number, with no decimal point.
-    Example: 5, -42, 2024
+- `list()` – **List**  
+  An *ordered* collection of items. You can change, add, or remove things in a list.  
+  Example: `[1, 2, 3]`, `["apple", "banana", "pear"]`
 
-    float() – Floating-point number
-    A number that can have a decimal point.
-    Example: 3.14, 0.0, -7.5
+- `int()` – **Integer**  
+  A whole number, with no decimal point.  
+  Example: `5`, `-42`, `2024`
 
-Why do types matter?
+- `float()` – **Floating-point number**  
+  A number that *can* have a decimal point.  
+  Example: `3.14`, `0.0`, `-7.5`
+
+**Why do types matter?**  
 Each type allows you to do different things. You can add numbers, but you can’t add a number and a string without converting.
-Functions
 
-Functions are built-in “mini-programs” in Python you can use to do something—just call them with parentheses.
+---
 
-    type(x) – Shows you the type of x.
+## Functions
 
-print(type("hello"))  # <class 'str'>
-print(type(5))        # <class 'int'>
+**Functions** are built-in “mini-programs” in Python you can use to do something—just call them with parentheses.
 
-print(x) – Sends information to your screen.
+- `type(x)` – Shows you the *type* of `x`.  
+  ```python
+  print(type("hello"))  # <class 'str'>
+  print(type(5))        # <class 'int'>
+  ```
 
-print("Hello, world!")
+- `print(x)` – Sends information to your screen.  
+  ```python
+  print("Hello, world!")
+  ```
 
-max(a, b, c, ...) – Gives you the largest value.
+- `max(a, b, c, ...)` – Gives you the *largest* value.  
+  ```python
+  print(max(1, 5, 3))  # 5
+  ```
 
-print(max(1, 5, 3))  # 5
+- `round(x, n)` – Rounds a number to `n` decimal places.  
+  ```python
+  print(round(3.14159, 2))  # 3.14
+  ```
 
-round(x, n) – Rounds a number to n decimal places.
+- `help(x)` – Opens up the help/documentation for anything in Python.  
+  ```python
+  help(str)
+  ```
 
-print(round(3.14159, 2))  # 3.14
+- `len(x)` – Tells you how many items are in something (like a list or string).  
+  ```python
+  print(len("hello"))    # 5
+  print(len([1,2,3]))    # 3
+  ```
 
-help(x) – Opens up the help/documentation for anything in Python.
+- `sorted(x)` – Returns a sorted version of your list (doesn’t change the original).  
+  ```python
+  numbers = [3, 1, 2]
+  print(sorted(numbers))  # [1, 2, 3]
+  ```
 
-help(str)
+---
 
-len(x) – Tells you how many items are in something (like a list or string).
+## Methods
 
-print(len("hello"))    # 5
-print(len([1,2,3]))    # 3
+**Methods** are like functions, but you use them *on* a specific object (like a string or a list), with a dot: `thing.method()`.
 
-sorted(x) – Returns a sorted version of your list (doesn’t change the original).
+- `.append(y)` – Adds `y` to the end of a list.  
+  ```python
+  my_list = [1, 2, 3]
+  my_list.append(4)
+  print(my_list)  # [1, 2, 3, 4]
+  ```
 
-    numbers = [3, 1, 2]
-    print(sorted(numbers))  # [1, 2, 3]
+- `.replace(a, b)` – In a string, replaces every occurrence of `a` with `b`.  
+  ```python
+  text = "Hello world"
+  print(text.replace("world", "Python"))  # "Hello Python"
+  ```
 
-Methods
+- `.upper()` – Makes all letters in a string uppercase.  
+  ```python
+  name = "abe"
+  print(name.upper())  # "ABE"
+  ```
 
-Methods are like functions, but you use them on a specific object (like a string or a list), with a dot: thing.method().
+- `.reverse()` – Flips the order of a list, changing it in-place.  
+  ```python
+  nums = [1, 2, 3]
+  nums.reverse()
+  print(nums)  # [3, 2, 1]
+  ```
 
-    .append(y) – Adds y to the end of a list.
+---
 
-my_list = [1, 2, 3]
-my_list.append(4)
-print(my_list)  # [1, 2, 3, 4]
+**Bottom line:**  
+- **Types** are what your data “is.”
+- **Functions** are tools you use on any data.
+- **Methods** are tools that belong to a particular kind of data (like a string or a list).
 
-.replace(a, b) – In a string, replaces every occurrence of a with b.
-
-text = "Hello world"
-print(text.replace("world", "Python"))  # "Hello Python"
-
-.upper() – Makes all letters in a string uppercase.
-
-name = "abe"
-print(name.upper())  # "ABE"
-
-.reverse() – Flips the order of a list, changing it in-place.
-
-    nums = [1, 2, 3]
-    nums.reverse()
-    print(nums)  # [3, 2, 1]
-
-Bottom line:
-
-    Types are what your data “is.”
-
-    Functions are tools you use on any data.
-
-    Methods are tools that belong to a particular kind of data (like a string or a list).
-
-If you want even more explanation, analogies, or practice problems for any of these, just tell me what’s confusing or what you’d like to try!
+If you want even **more explanation, analogies, or practice problems** for any of these, just tell me what’s confusing or what you’d like to try!
