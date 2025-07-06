@@ -66,10 +66,9 @@ When you use Python’s built-in functions like `+`, `==`, `in`, or `[]` with st
 
 **Checks if a string contains another string.**
 
-    ```python
     "cat" in "catalog"   # True
     "dog" in "catalog"   # False
-    ```
+
 *Finds out if a piece of text is inside another.*
 
 ---
