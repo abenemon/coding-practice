@@ -11,8 +11,8 @@ In Python, `type` is both:
 
 1. **The function you use to check what type an object is:**  
 
-           type("hi")        # <class 'str'>
-           type([1, 2])      # <class 'list'>
+    type("hi")        # <class 'str'>
+    type([1, 2])      # <class 'list'>
 
 3. **The metaclass that all classes are instances of:**  
    Every class in Python is itself an object of type `type`.
