@@ -288,3 +288,74 @@ For each, you’ll see:
         class A: pass
         class B(A): pass
         B.mro()      # [<class '__main__.B'>, <class ']()
+
+---
+
+## __prepare__(name, bases, **kwds) (class method)
+
+- **What you write:**  
+      (Only used when writing custom metaclasses.)
+
+- **What it means:**  
+  Lets you customize the class namespace before the class body is executed. (Advanced.)
+
+---
+
+## __new__(*args, **kwargs) (static method)
+
+- **What you write:**  
+      (Used for creating a new type object.)
+
+- **What it means:**  
+  Allocates a new type object.  
+  Usually only used internally or in advanced metaprogramming.
+
+---
+
+## Data Descriptors & Attributes
+
+You will see these if you look at `dir(type)` or the help output.  
+Usually you don’t use them directly, but they have technical meanings:
+
+- **__abstractmethods__**  
+  - Used for tracking abstract methods in abstract base classes.
+
+- **__annotations__**  
+  - Holds type hints for class variables.
+
+- **__dict__**  
+  - A dictionary containing the class’s attributes and methods.
+
+- **__text_signature__**  
+  - Stores the function signature for introspection.
+
+- **__base__**  
+  - The immediate parent class (base) of the class.
+
+- **__bases__**  
+  - Tuple of all base classes.
+
+- **__basicsize__**, **__dictoffset__**, **__flags__**, **__itemsize__**, **__mro__**, **__type_params__**, **__weakrefoffset__**  
+  - Technical details about the object layout and inheritance tree.  
+    (You won’t need these in daily coding.)
+
+---
+
+## In summary
+
+- The `type` class is the root of all classes in Python—it’s how classes themselves are made!
+- You usually use `type()` to check the type of a value.
+- You can also use `type(name, bases, dict)` to create classes dynamically.
+- Most special methods you’ll never call directly, but they explain how Python handles type operations behind the scenes.
+
+---
+
+**Tip:**  
+To see everything available on `type`, run:
+
+    help(type)
+    dir(type)
+
+---
+
+Feel free to copy and save this file in your GitHub repo!
