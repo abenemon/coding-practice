@@ -20,7 +20,12 @@ When you see `max(iterable, *[, default=obj, key=func])` or `max(arg1, arg2, *ar
     `max(3, 8, 2, 5)`
 
 - **What Python does:**  
-    Goes through all the items you gave it, compares them, and returns the largest one.
+    Python looks at all the values you give it, and compares them to figure out which is the largest.  
+    Unlike some other functions (like `abs(x)` or `len(x)`), **there is no special `__max__` method** that Python calls on your objects.  
+    Instead, Python compares the items using their built-in comparison dunder methods, like `__lt__` (less than), `__gt__` (greater than), and `__eq__` (equal).
+    
+    - For example, when comparing two items `a` and `b`, Python may use `a < b` (calls `a.__lt__(b)`), or `a > b` (calls `a.__gt__(b)`), depending on how your objects are defined.
+    - If you want `max()` to work with your own objects, you must implement these comparison methods in your class.
 
 ---
 
@@ -61,19 +66,27 @@ When you see `max(iterable, *[, default=obj, key=func])` or `max(arg1, arg2, *ar
 
 ---
 
-## Common Use Cases
+## Custom Class Example: How max() Uses Comparison Methods
 
-- Find the biggest number in a dataset.
-- Pick the item with the highest score, value, or length.
-- Handle empty lists gracefully with the `default` parameter.
-- Use `key` to customize how “biggest” is decided (like by length, value, etc.).
+If you want `max()` to work on your own objects, define comparison dunder methods like `__lt__` (less than):
+
+    class Thing:
+        def __init__(self, size):
+            self.size = size
+        def __lt__(self, other):
+            return self.size < other.size
+
+    a = Thing(5)
+    b = Thing(9)
+    c = Thing(3)
+    biggest = max([a, b, c])   # Python calls a.__lt__(b), b.__lt__(c), etc.
 
 ---
 
 ## In summary
 
 - `max()` helps you find the largest item from a set or list of things.
-- Works with numbers, strings, or anything Python can compare.
+- **There is no `__max__` method**—instead, Python uses comparison dunder methods like `__lt__` and `__gt__`.
 - Use `key` to control the criteria, and `default` for safe empty cases.
 
 ---
