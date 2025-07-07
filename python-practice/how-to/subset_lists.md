@@ -44,6 +44,7 @@ fruits = ["apple", "banana", "cherry", "date"]
     my_list[start:stop]
     ```
     This gives all elements from `start` up to, but not including, `stop`.
+  Abe's note: "In general, this is the syntax: the index you specify before the colon, so where the slice starts, is included, while the index you specify after the colon, where the slice ends, is not."
 
 - **Examples:**
     ```python
