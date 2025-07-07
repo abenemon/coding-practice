@@ -125,3 +125,4 @@ If you want even **more explanation, analogies, or practice problems** for any o
 ## How much is your $100 worth after 7 years?
     
     print(100 * (1.1**7))
+
