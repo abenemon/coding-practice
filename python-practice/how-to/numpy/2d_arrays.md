@@ -10,9 +10,9 @@ A **NumPy 2D array** is a grid of numbers with rows and columns, like a table or
 - Each value is accessed with two indices: `array[row, column]`.
 - Example: a 3x2 array (3 rows, 2 columns):
 
-    [[1, 2],
-     [3, 4],
-     [5, 6]]
+    `[[1, 2],`
+     `[3, 4],`
+     `[5, 6]]`
 
 - The shape of this array is `(3, 2)`.
 
