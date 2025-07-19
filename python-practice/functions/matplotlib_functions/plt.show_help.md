@@ -1,4 +1,3 @@
-```
 # Understanding `plt.show`: How to Display Plots in Matplotlib
 
 When you look up `help(plt.show)` in Python, you’re seeing the command that **makes your plots appear in a window** (outside of Jupyter) or triggers the display of all your figures. Here’s how it works for beginners.
@@ -54,4 +53,3 @@ plt.show()``
 * Save figures **before** you call `plt.show()` if you want to do both.
 
 Tip: To see more details or special options, run `help(plt.show)` in your Python environment.
-```
