@@ -23,20 +23,20 @@ Suppose you want to store information about several European countries, includin
 
 You can get an inner dictionary by using the outer key:
 
-``europe['france']``  
-# Returns: ``{'capital': 'paris', 'population': 66.03}``
+``europe['france']``
+Returns: ``{'capital': 'paris', 'population': 66.03}``
 
 You can then access a specific attribute:
 
-``europe['france']['capital']``  
-# Returns: ``'paris'``
+``europe['france']['capital']``
+Returns: ``'paris'``
 
 ## Adding or Updating Entries
 
-- **Add a new country:**
+- Add a new country:  
   ``europe['italy'] = { 'capital': 'rome', 'population': 59.83 }``
 
-- **Update an existing value:**
+- Update an existing value:  
   ``europe['germany']['population'] = 81.00``
 
 ## Looping Through a Dictionary of Dictionaries
@@ -45,6 +45,12 @@ To print out all countries and their capitals:
 
 ``for country, info in europe.items():
     print(country, "->", info['capital'])``
+
+Output:
+``spain -> madrid
+france -> paris
+germany -> berlin
+norway -> oslo``
 
 ## Why Use This Pattern?
 
