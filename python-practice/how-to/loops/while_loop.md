@@ -46,14 +46,14 @@ The `while` loop in Python lets you repeat a block of code as long as a conditio
 ## Skipping Iterations with `continue`
 
 - The `continue` statement skips the rest of the current loop and starts the next iteration.
-``
-    n = 0
-    while n < 5:
-        n += 1
-        if n == 3:
-            continue  # Skip printing 3
-        print(n)
-``
+
+     n = 0
+     while n < 5:
+         n += 1
+         if n == 3:
+             continue  # Skip printing 3
+         print(n)
+  
 - This prints 1, 2, 4, 5 (skips 3).
 
 ## The `else` Clause
