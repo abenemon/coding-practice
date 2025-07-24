@@ -46,12 +46,12 @@ The `for` loop is Python’s way of repeating actions for each item in a collect
 
 - **Using `range()` to loop N times**
 
-    for i in range(3):
-        print(i)
+        for i in range(3):
+            print(i)
 
-    0
-    1
-    2
+        0
+        1
+        2
 
 ## Loop Control: `break` and `continue`
 
