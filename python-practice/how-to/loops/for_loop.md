@@ -57,24 +57,24 @@ The `for` loop lets you repeat actions for each item in a collection (like a lis
 
 - `break` (exit the loop early):
 
-            for num in [1, 2, 3, 4]:
-                if num == 3:
-                    break
-                print(num)
+      for num in [1, 2, 3, 4]:
+            if num == 3:
+                  break
+            print(num)
 
-            1
-            2
+      1
+      2
 
 - `continue` (skip to the next item):
 
-            for num in [1, 2, 3, 4]:
-                if num == 3:
-                    continue
-                print(num)
+       for num in [1, 2, 3, 4]:
+             if num == 3:
+                   continue
+             print(num)
 
-            1
-            2
-            4
+        1
+        2
+        4
 
 ## Looping Over Dictionaries
 
