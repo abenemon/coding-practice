@@ -29,20 +29,20 @@ The `for` loop is Python’s way of repeating actions for each item in a collect
 
 - **Looping over a list**
 
-    for fruit in ['apple', 'banana', 'cherry']:
-        print(fruit)
+        for fruit in ['apple', 'banana', 'cherry']:
+            print(fruit)
 
-    apple
-    banana
-    cherry
+        apple
+        banana
+        cherry
 
 - **Looping over a string**
 
-    for letter in "hi":
-        print(letter)
+        for letter in "hi":
+            print(letter)
 
-    h
-    i
+        h
+        i
 
 - **Using `range()` to loop N times**
 
