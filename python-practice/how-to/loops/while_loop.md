@@ -1,4 +1,3 @@
-```
 # Understanding Python’s `while` Loop: A Natural Language Explainer
 
 The `while` loop in Python lets you repeat a block of code as long as a condition is true. It’s a core tool for writing programs that need to “keep going until something changes.”
@@ -103,4 +102,3 @@ The `while` loop in Python lets you repeat a block of code as long as a conditio
 - `else` is rarely used but can be handy for certain cases.
 
 **Tip:** Print the loop variable inside your `while` to track what’s happening and debug your code!
-```
