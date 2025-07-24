@@ -28,33 +28,36 @@ The `for` loop is Python’s way of letting you repeat actions for each item in 
 
 ## Examples
 
-    # Looping over a list
+- **Looping over a list**
+
     for fruit in ['apple', 'banana', 'cherry']:
         print(fruit)
-    # Output:
-    # apple
-    # banana
-    # cherry
 
-    # Looping over a string (each character)
+    apple
+    banana
+    cherry
+
+- **Looping over a string (each character)**
+
     for letter in "hello":
         print(letter)
-    # Output:
-    # h
-    # e
-    # l
-    # l
-    # o
 
-    # Using `range()` to loop N times
+    h
+    e
+    l
+    l
+    o
+
+- **Using `range()` to loop N times**
+
     for i in range(5):
         print(i)
-    # Output:
-    # 0
-    # 1
-    # 2
-    # 3
-    # 4
+
+    0
+    1
+    2
+    3
+    4
 
 ## Loop Control: `break` and `continue`
 
@@ -64,7 +67,9 @@ The `for` loop is Python’s way of letting you repeat actions for each item in 
             if num == 3:
                 break
             print(num)
-        # Output: 1 2
+
+        1
+        2
 
 - `continue`: Skip to the next item.
 
@@ -72,24 +77,29 @@ The `for` loop is Python’s way of letting you repeat actions for each item in 
             if num == 3:
                 continue
             print(num)
-        # Output: 1 2 4
+
+        1
+        2
+        4
 
 ## Looping Over Dictionaries
 
-    # Looping over keys
+- **Looping over keys**
+
     d = {'a': 1, 'b': 2}
     for key in d:
         print(key)
-    # Output:
-    # a
-    # b
 
-    # Looping over keys and values
+    a
+    b
+
+- **Looping over keys and values**
+
     for key, value in d.items():
         print(key, value)
-    # Output:
-    # a 1
-    # b 2
+
+    a 1
+    b 2
 
 ## In summary
 
