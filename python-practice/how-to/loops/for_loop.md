@@ -80,20 +80,20 @@ The `for` loop is Python’s way of repeating actions for each item in a collect
 
 - **Just keys**:
 
-    d = {'a': 1, 'b': 2}
-    for key in d:
-        print(key)
+        d = {'a': 1, 'b': 2}
+        for key in d:
+            print(key)
 
-    a
-    b
+        a
+        b
 
 - **Keys and values**:
 
-    for key, value in d.items():
-        print(key, value)
+        for key, value in d.items():
+            print(key, value)
 
-    a 1
-    b 2
+        a 1
+        b 2
 
 ## In summary
 
