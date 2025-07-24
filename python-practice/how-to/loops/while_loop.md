@@ -56,30 +56,30 @@ A `while` loop lets you repeat a block of code **as long as a condition is true*
 
 - `break` (exit the loop immediately):
 
-            count = 0
-            while count < 5:
-                if count == 3:
-                    break
-                print(count)
-                count += 1
+      count = 0
+      while count < 5:
+          if count == 3:
+              break
+          print(count)
+          count += 1
 
-            0
-            1
-            2
+      0
+      1
+      2
 
 - `continue` (skip to the next iteration):
 
-            count = 0
-            while count < 5:
-                count += 1
-                if count == 3:
-                    continue
-                print(count)
+      count = 0
+      while count < 5:
+          count += 1
+          if count == 3:
+              continue
+          print(count)
 
-            1
-            2
-            4
-            5
+      1
+      2
+      4
+      5
 
 ## Common Pitfall: Infinite Loops
 
