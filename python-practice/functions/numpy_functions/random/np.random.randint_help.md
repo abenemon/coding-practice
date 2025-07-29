@@ -1,4 +1,3 @@
-```
 # Understanding `np.random.randint`: Generating Random Integers in NumPy
 
 The `np.random.randint` function in NumPy generates random **integers** from a specified range.  
@@ -76,4 +75,3 @@ It’s the go-to way to create arrays or single values of random whole numbers f
 
 **Summary:**  
 Use `np.random.randint` when you need random whole numbers in a specified range, as single values or in arrays of any shape.
-```
