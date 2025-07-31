@@ -48,9 +48,39 @@ Now you can use this custom function just like any built-in function:
 
 ---
 
+## Step 3: Summaries on Multiple Columns
+
+You can also get custom statistics for **more than one column at once**.  
+Just select the columns you want before calling `.agg()`:
+
+      dogs[["weight_kg", "height_cm"]].agg(pct30)
+
+- This will calculate the 30th percentile for both the `weight_kg` and `height_cm` columns.
+- The result is a summary for each column using your custom function.
+
+---
+
+## Step 4: Multiple Summaries at Once
+
+What if you want **several custom statistics**?  
+You can define more functions and pass a list of them into `.agg()`.
+
+Example from the video:
+
+      def pct40(column):
+          return column.quantile(0.4)
+      dogs["weight_kg"].agg([pct30, pct40])
+
+- Here, `pct40` is a new function that calculates the 40th percentile.
+- By passing `[pct30, pct40]`, pandas runs *both* functions on the `weight_kg` column.
+- The result: you get both the 30th and 40th percentiles for the dogs’ weights, all at once.
+
+---
+
 ## Why This Is Powerful
 
 - You can write **any function** you want and use it in `.agg()`, letting you summarize your data in any way—not just with built-in statistics.
+- `.agg()` works with a single column, many columns, or many functions—great for flexible, powerful data analysis!
 
 ---
 
@@ -58,11 +88,13 @@ Now you can use this custom function just like any built-in function:
 
 - **Defining a function**: Write your own code to compute a custom statistic.
 - **Using with `.agg()`**: Pass your function’s *name* (not a string!) to `.agg()`.
-- **Result**: Pandas runs your function on the column and returns your custom summary.
+- **Multiple columns**: Select multiple columns and call `.agg()` for summaries on all of them.
+- **Multiple summaries**: Pass a list of functions into `.agg()` to get several statistics at once.
+- **Result**: Pandas runs your function(s) on your chosen column(s) and returns your custom summaries.
 
 ---
 
 **Tip:**  
-You don’t have to fully understand custom functions the first time you see them! For now, just remember: if you see `def ...`, someone is defining a little tool that can be used with `.agg()`.
+You don’t have to fully understand custom functions the first time you see them! For now, just remember: if you see `def ...`, someone is defining a little tool that can be used with `.agg()` for custom summaries.
 
 ---
